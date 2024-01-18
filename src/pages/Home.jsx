@@ -72,17 +72,17 @@ const Home = () => {
       <form>
         <div className="form-field">
           <label htmlFor="day">DAY</label>
-          <input type="text" placeholder='DD' name={day} value={day} onChange={(e)=>setDay(e.target.value)} min={1} max={31} />
+          <input id="day" type="text" placeholder='DD' name='day' value={day} onChange={(e)=>setDay(e.target.value)}  />
           <div className="error"><p>{dayError}</p></div>
         </div>
         <div className="form-field">
           <label htmlFor="month">MONTH</label>
-          <input type="text" placeholder='MM' name='month' value={month} onChange={e=>setMonth(e.target.value)} min={1} max={12} />
+          <input id='month' type="text" placeholder='MM' name='month' value={month} onChange={e=>setMonth(e.target.value)}  />
           <div className="error"><p>{monthError}</p></div>
         </div>
         <div className="form-field">
           <label htmlFor="year">YEAR</label>
-          <input type="text" placeholder='YYYY' name='year' value={year} onChange={e=>setYear(e.target.value)}/>
+          <input id='year' type="text" placeholder='YYYY' name='year' value={year} onChange={e=>setYear(e.target.value)}/>
           <div className="error"><p>{yearError}</p></div>
         </div>
         <button onClick={handleClick}><img src={arrow} alt="arrow icon" /></button>
