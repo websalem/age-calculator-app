@@ -1,0 +1,19 @@
+*, *::before, *::after{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    font-family:$main-font;
+    background-color: $Off-white;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+.container{
+    padding: 0 1rem;
+    width:100%;
+    max-width: 1280px;
+    display: grid;
+    margin:auto;
+}

@@ -1,0 +1,122 @@
+.age-app{
+    width:850px;
+    max-height: 650px;
+    background-color: $White;
+    border-radius: 15px;
+    border-bottom-right-radius: 150px;
+    padding:60px;
+    form{
+        display: flex;
+        padding-bottom: 40px;
+        border-bottom: 1px solid $Off-white;
+        position: relative;
+        margin-bottom: 45px;
+        gap: 40px;
+        .form-field{
+            &.error{
+                label{
+                    color:red;
+                }
+                input{
+                    border:1px solid red;
+                }
+            }
+            label{
+                display: block;
+                font-size: 12px;
+                letter-spacing: 2px;
+                font-weight: 400;
+                color:$Smokey-grey;
+                margin-bottom: 5px;
+            }
+            input{
+                padding:20px 30px;
+                max-width: 160px;
+                border:1px solid $Light-grey;
+                border-radius: 5px;
+                font-size: 1.5rem;
+                font-weight: 800;
+                cursor: pointer;
+                &::placeholder{
+                    color:$Smokey-grey;
+                }
+                &:hover, &:focus{
+                    border: 1px solid $Purple;
+                    outline:1px solid $Purple;
+                }
+            }
+        }
+        button{
+            appearance: none;
+            border: none;
+            padding:10px;
+            border-radius: 50%;
+            width:90px;
+            height: 90px;
+            cursor: pointer;
+            background-color: $Purple;
+            position: absolute;
+            right:0;
+            top:75%;
+            transform: translateY(-15%);
+            &:hover{
+                background-color: $Off-black;
+            }
+        }
+    }
+    .years,.months,.days{
+        display: flex;
+        p{
+            font-size: 5rem;
+            font-style: italic;
+            font-weight: 800;
+            &:first-of-type{
+                color:$Purple;
+                margin-right: 20px;
+            }
+        }
+    }
+}
+.error{
+    p{
+        font-size: 12px;
+        font-weight: 400;
+        color: red;
+    }
+}
+@media screen and (max-width:768px){
+    .age-app{
+        width:100%;
+        max-height: 650px;
+        margin:auto;
+        padding:20px;
+        form{
+            padding-bottom: 60px;
+            margin-bottom: 20px;
+            gap: 10px;
+            .form-field{
+                input{
+                    padding:15px 10px;
+                    max-width: 100px;
+                    font-size: 1.25rem;
+                }
+            }
+            button{
+                width:70px;
+                height: 70px;
+                right:50%;
+                top:75%;
+                transform: translateX(50%);
+            }
+        }
+        .years{
+            margin-top:80px ;
+        }
+        .years,.months,.days{
+            p{
+                font-size: 4rem;
+            }
+        }
+    }
+
+}
